@@ -48,8 +48,8 @@ function writePackage(p) {
 function writeFiles() {
   var src = path.join(__dirname, 'src');
   for(var f of fs.readdirSync(src)) {
-    f = f.replace(/^_/, '');
-    fs.copyFileSync(path.join(src, f), f);
+    var g = f.replace(/^_/, '');
+    fs.copyFileSync(path.join(src, f), g);
   }
 }
 
