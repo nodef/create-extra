@@ -9,7 +9,10 @@ function getDescription() {
   for(var f of fs.readdirSync('.'))
     if(/^README/i.test(f)) break;
   var a = fs.readFileSync(f, 'utf8');
-  return a.replace(/\.[\s\S]*/, '').replace(/\s+|\r?\n/g, ' ');
+  a = a.replace(/^#.*?\n/, '');
+  a = a.replace(/\.[\s\S]*/, '');
+  a = a.replace(/\s+|\r?\n/g, ' ');
+  return a;
 }
 
 // Gets keywords from package name.
@@ -34,6 +37,7 @@ function getPackage(o) {
   p.keywords = (o.keywords || getKeywords(p.name) || p.keywords.join()).split(',');
   p.author = o.author || p.author;
   p.license = o.license || p.license;
+  p.scripts = {test: 'exit'};
   return p;
 }
 
