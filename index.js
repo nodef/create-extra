@@ -11,8 +11,8 @@ function getDescription() {
   var a = fs.readFileSync(f, 'utf8');
   a = a.replace(/^#.*?\n/, '');
   a = a.replace(/\.[\s\S]*/, '');
-  a = a.replace(/\s+|\r?\n/g, ' ');
-  return a;
+  a = a.replace(/\s+|\r?\n/g, ' ').trim();
+  return a+'.';
 }
 
 // Gets keywords from package name.
