@@ -1,6 +1,6 @@
 {
   "name": "create-extra",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This is an initializer for extra-* packages.",
   "main": "index.js",
   "scripts": {
