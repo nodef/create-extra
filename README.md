@@ -27,3 +27,5 @@ npm init extra [options]
 # -a, --author
 # -l, --license
 ```
+
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/create-extra)
